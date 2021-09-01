@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta name="description" content="The best business projects">
+    <meta name="keywords" content="HTML, business, orders">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="dist/style.css">
+    <script src="dist/bundle.js" type="text/javascript"></script>
+    <title>LOREMIPSUM</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container container_flex">
+            <a href="#" class="header__logo">LOREMIPSUM.<span class="header__logo-span">NET</span></a>
+            <nav class="header__menu">
+                <a href="#" class="header__link">БИЗНЕС</a>
+                <a href="#" class="header__link">О НАС</a>
+                <a href="#" class="header__link">ЦЕНЫ</a>
+                <a href="#" class="header__link">ОФОРМИТЬ ЗАКАЗ</a>
+            </nav>
+            <div class="header__burger">
+                <span class="header__burger-span"></span>
+            </div>
+        </div>
+    </header>
+    <div class="m-hero">
+        <div class="container">       
+            <section class="m-hero__content">
+                <h1 class="m-hero__title"><span class="m-hero__title-span">LOREM IPSUM</span> DOLOR SIT AMETCONSECTETUR 
+                    <span class="m-hero__title-span">ADIPISCING</span></h1>
+                <h3 class="m-hero__subtitle">At vero eos et accusamus et iusto odio dignissimos ducimus!</h3>
+                <ul class="m-hero__list">
+                    <li class="m-hero__li">Totam rem aperiam eaque ipsa</li>
+                    <li class="m-hero__li">Sit voluptatem accusantium doloremque laudantium</li>
+                    <li class="m-hero__li">Sed ut perspiciatis, unde omnis iste natus error</li>
+                </ul>
+                <div class="m-hero__buttons">
+                    <a href="#" class="btn">ЗАКАЗАТЬ</ф>
+                    <a href="#" class="btn btn__white">ПОДРОБНЕЕ</a>
+                </div>
+            </section>
+        </div>
+    </div> 
+    <div class="ordering">
+            <div class="container">
+                <h2 class="ordering__title">ОФОРМЛЕНИЕ <span class="ordering__span">ЗАКАЗА</span></h2>
+                <p class="ordering__text">Перед заполнением формы ознакомьтесь с нашей схемой работы!</p>
+                <div class="ordering__items">
+                    <div class="ordering__item-box">
+                        <div class="ordering__item-wrapper">
+                            <img src="./src/images/ordering/ordering-logo-scope.svg" alt="Scope icon" class="ordering__icon">
+                        </div>
+                        <p class="ordering__item-desc">Lorem ipsum dolorsit amet</p>
+                    </div>
+                    <div class="ordering__item-box">
+                        <div class="ordering__item-wrapper">
+                            <img src="./src/images/ordering/ordering-logo-percent.svg" alt="Scope icon" class="ordering__icon">
+                        </div>
+                        <p class="ordering__item-desc">Сonsecteturadipiscing elit</p>
+                    </div>
+                    <div class="ordering__item-box">
+                        <div class="ordering__item-wrapper">
+                            <img src="./src/images/ordering/ordering-logo-doc.svg" alt="Scope icon" class="ordering__icon">
+                        </div>
+                        <p class="ordering__item-desc">Sed do eiusmod tempor</p>
+                    </div>
+                    <div class="ordering__item-box">
+                        <div class="ordering__item-wrapper">
+                            <img src="./src/images/ordering/ordering-logo-email.svg" alt="Scope icon" class="ordering__icon">
+                        </div>
+                        <p class="ordering__item-desc">Esse cillum doloreeu fugiat</p>
+                    </div>
+                    <div class="ordering__item-box">
+                        <div class="ordering__item-wrapper">
+                            <img src="./src/images/ordering/ordering-logo-money.svg" alt="Scope icon" class="ordering__icon">
+                        </div>
+                        <p class="ordering__item-desc">Excepteur sint occaecat cupidatat non proident</p>
+                    </div>
+                </div>
+                <form action="" class="ordering__form">
+                    <div class="ordering__row">
+                        <div class="ordering__cell">
+                            <div class="ordering__select">
+                                <select class="select" style="display: none;">
+                                    <option value="1">First Item</option>
+                                    <option value="2">Second Item</option>
+                                    <option value="3">Third Item</option>
+                                    <option value="4">Fourth Item</option>
+                                    <option value="5">Fifth Item</option>
+                                    <option value="6">First Item</option>
+                                    <option value="7">Second Item</option>
+                                    <option value="8">Third Item</option>
+                                    <option value="9">Fourth Item</option>
+                                    <option value="10">Fifth Item</option>
+                                    <option value="11">First Item</option>
+                                    <option value="12">Second Item</option>
+                                    <option value="13">Third Item</option>
+                                    <option value="14">Fourth Item</option>
+                                    <option value="15">Fifth Item</option>
+                                    <option value="16">First Item</option>
+                                    <option value="17">Second Item</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="ordering__cell">
+                            <input class="input" placeholder="Ваш e-mail" name="email" type="email">
+                        </div>
+                        <div class="ordering__cell">
+                            <input class="input" placeholder="Ваше имя" name="name">
+                        </div>
+                        <div class="ordering__cell ordering__cell_range">
+                            <div class="ordering__row ordering__row_justify">
+                                <p class="ordering__range-text">Sed ut perspiciatis, unde omnis iste natus</p>
+                                <span id="rangeValue" class="ordering__percents"></span>
+                            </div>
+                            <input class="ordering__range" type="range" min="0" max="100" step="1" id="rangeInput" name="percent" value="75">
+                        </div>
+                        <div class="ordering__cell">
+                            <div class="ordering__file-box">
+                                <input type="file" name="file" id="input__file" class="ordering__input-file" multiple>
+                                <label for="input__file" class="ordering__input-file-button">
+                                    <span class="ordering__file-icon-wrapper">
+                                        <img class="ordering__file-icon" src="./src/images/ordering/file-icon.svg" alt="Прикрепить файл">
+                                    </span>
+                                    <span class="ordering__file-button-text">ПРИКРЕПИТЬ ФАЙЛ</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ordering__row ordering__row_center">
+                        <button class="btn ordering__btn">
+                            ОТПРАВИТЬ
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <section class="footer__content">
+                    <span class="footer__copyrights">© 2018 «LoremIpsum.net» Все права защищены.</span>
+                    <div class="footer__items">
+                        <div class="footer__paywallets">
+                            <div class="footer__item">
+                                <img class="footer__icon" src="./src/images/footer/footer-qiwi.svg" alt="Qiwi wallet">
+                                <span class="footer__item-wallet">Qiwi wallet</span>
+                            </div>
+                            <div class="footer__item">
+                                <img class="footer__icon" src="./src/images/footer/footer-yandex.svg" alt="Yandex wallet">
+                                <span class="footer__item-wallet">Yandex Money</span>
+                            </div> 
+                            <div class="footer__item">
+                                <img class="footer__icon" src="./src/images/footer/footer-webmoney.svg" alt="Webmoney wallet">
+                                <span class="footer__item-wallet">Web Money</span>
+                            </div>    
+                        </div>
+                        <div class="footer__links">
+                            <a href="#" class="footer__item">
+                                <img class="footer__icon" src="./src/images/footer/footer-mail.svg" alt="Email">
+                                <span class="footer__text">info@ipsum228.com</span>
+                            </a> 
+                            <a href="#" class="footer__item">
+                                <img class="footer__icon" src="./src/images/footer/footer-vkontakte.svg" alt="Vkontakte">
+                                <span class="footer__text">Мы вконтакте</span>
+                            </a> 
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </footer>
+</body>
+</html>

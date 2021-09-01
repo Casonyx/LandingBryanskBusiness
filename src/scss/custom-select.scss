@@ -1,0 +1,90 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+.ordering__select {
+    .custom-select {
+        position: relative;
+
+        &__dropdown {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            background-color: #272733;
+            border: 1px solid $cl-tertiary;
+            box-sizing: border-box;
+            max-height: em(200, $fz-base);
+            overflow-y: auto;
+            border-radius: 0 0 em(3, $fz-base) em(3, $fz-base);
+
+            &::-webkit-scrollbar {
+                width: em(7, $fz-base);
+            }
+            
+            &::-webkit-scrollbar-track {
+                background: $cl-tertiary-light;
+            }
+            
+            &::-webkit-scrollbar-thumb {
+                background-color: #3E9CDC;
+                border-radius: em(3, $fz-base);
+                
+                &:hover {
+                    background-color: darken($color: #3E9CDC, $amount: 20%);
+                }
+            }
+        }
+
+        &__option {
+            display: block;
+            cursor: pointer;
+            border: none;
+            background: none;
+
+            &--value {
+                text-align: left;
+                @include input;
+
+                &::after {
+                    position: absolute;
+                    box-sizing: border-box;
+                    width: em(6, $fz-base);
+                    height: em(6, $fz-base);
+                    top: 50%;
+                    right: em(15, $fz-base);
+                    border-right: 2px solid #000;
+                    transform: translateY(-50%) rotate(45deg);
+                    content: "";
+                    border-bottom: 2px solid #000;
+                }
+            }
+        }
+
+        &--active {
+            .custom-select__option {
+                border: none;
+                background-color: $cl-tertiary;
+                transition: background-color .3s;
+                color: $cl-primary;
+                border-radius: em(3, $fz-base) em(3, $fz-base) 0 0;
+            }
+
+            .custom-select__dropdown .custom-select__option {
+                width: 100%;
+                min-height: em(48, 18);
+                text-align: left;
+                padding: em(10, $fz-base);
+                background-color: #272733;
+                transition: color .3s;
+
+                &:hover {
+                    color: #42A9ED;
+                }
+            }
+
+            .custom-select__option--value::after {
+                transform: rotate(224deg);
+                border-color: $cl-primary;
+            }
+        }
+    }
+}
