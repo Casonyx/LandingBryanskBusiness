@@ -22,20 +22,24 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-top: em(70, $fz-base);
+        padding-top: em(72, $fz-base);
         background: rgba(5, 5, 10, 0.96);
         z-index: 2;
     }
 
     &__link-burger {
-        $fz: 19;
+        $fz: 16;
         text-decoration: none;
         transition: color .3s;
         font-family: $font-primary;
         color: $cl-primary;
-        font-weight: 800;
+        font-weight: 400;
         font-size: em($fz, $fz-base);
-        padding: em(20, $fz) 0;
+        margin-bottom: em(20, $fz);
+
+        &:first-child {
+            margin-top: em(20, $fz);
+        }
 
         &:hover {
             color: #43ABF0;
