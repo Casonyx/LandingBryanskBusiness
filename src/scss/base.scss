@@ -51,6 +51,7 @@ body {
     background-color: $background-color;
     color: $cl-primary;
     transition: background-color .3s;
+    cursor: pointer;
 
     &:hover {
         background-color: lighten($background-color, 8%);

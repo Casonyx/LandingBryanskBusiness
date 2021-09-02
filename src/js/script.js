@@ -18,4 +18,9 @@ $(document).ready(function(){
         modifier: 'custom-select',
         transition: 400,
     });
+
+    //burger
+    $('.header__burger').click(function(event) {
+        $('.header__burger-menu').toggleClass('header__active');
+    });
 })

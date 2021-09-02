@@ -1,4 +1,4 @@
-import './js/rainbows.js';
+import './js/script.js';
 
 import './scss/mixins.scss';
 import './scss/normalize.scss';

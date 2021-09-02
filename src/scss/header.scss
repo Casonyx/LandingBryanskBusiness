@@ -13,11 +13,41 @@
         display: flex;
     }
 
+    &__burger-menu {
+        transition: top .3s;
+        position: fixed;
+        width: 100%;
+        top: -100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: em(70, $fz-base);
+        background: rgba(5, 5, 10, 0.96);
+        z-index: 2;
+    }
+
+    &__link-burger {
+        $fz: 19;
+        text-decoration: none;
+        transition: color .3s;
+        font-family: $font-primary;
+        color: $cl-primary;
+        font-weight: 800;
+        font-size: em($fz, $fz-base);
+        padding: em(20, $fz) 0;
+
+        &:hover {
+            color: #43ABF0;
+        }
+    }
+
     &__burger {
         display: none;
         position: relative;
         width: em(36, $fz-base);
-        height: em(20, $fz-base);
+        height: em(16, $fz-base);
+        z-index: 3;
     
         &::before {
             content: '';
@@ -26,7 +56,7 @@
             width: em(33, $fz-base);
             height: em(3, $fz-base);
             left: em(0, $fz-base);
-            top: em(2, $fz-base);
+            top: em(3, $fz-base);
         }
 
         &::after {
@@ -46,6 +76,7 @@
         color: $cl-primary;
         font-weight: 800;
         font-size: em(28, $fz-base);
+        z-index: 3;
     }
 
     &__logo-span {
@@ -58,8 +89,8 @@
         transition: color .3s;
         font-family: $font-primary;
         color: $cl-primary;
-        font-weight: 600;
-        font-size: em(13, $fz-base);
+        font-weight: 400;
+        font-size: em($fz, $fz-base);
 
         &:not(:last-child) {
             margin-right: em(60, $fz);
@@ -95,6 +126,11 @@
 
         &__burger {
             display: block;
+        }
+
+        &__active {
+            transition: top .3s;
+            top: 0;
         }
     }
 }

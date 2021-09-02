@@ -12,7 +12,7 @@
     &__title {
         $fz: 36;
         font-family: $font-primary;
-        font-weight: 800;
+        font-weight: 700;
         font-size: em($fz, $fz-base);
         color: $cl-primary;
         text-align: center;
@@ -59,9 +59,9 @@
                 content: "";
                 position: absolute;
                 left: 100%;
-                top: 28%;
+                top: em(46, $fz-base);
                 transform: translateX(-50%);
-                width: 5.6vw;
+                width: 5.59vw;
                 height: 0.3vw;
                 background: url(../images/ordering/dot.svg) repeat-x;
                 background-size: auto 100%;
@@ -95,7 +95,7 @@
         $fz: 18;
         color: #fff;
         font-family: $font-primary;
-        font-weight: 600;
+        font-weight: 700;
         font-size: #{$fz}px;
         flex: 0 0 auto;
         margin-left: em(10, $fz);
@@ -132,6 +132,7 @@
         margin: 0 0 em(10, 18);
         color: $cl-primary;
         font-family: $font-primary;
+        font-weight: 400;
     }
 
     &__range {
@@ -281,6 +282,8 @@
     &__file-button-text {
         margin-bottom: em(1, $fz-base);
         font-size: 15px;
+        font-family: $font-primary;
+        font-weight: 700;
     }
 
     &__send-btn {
@@ -288,26 +291,9 @@
         justify-content: center;
     }
 
-    &__form-btn {
-        $fz: 15;
-        font-size: em($fz, $fz-base);
-        min-width: em(370, $fz);
-        min-height: em(48, $fz);
-        background: #3E9CDC;
-        color: $cl-primary;
-        font-family: $font-primary;
-        border: 1px solid #FFF;
-        box-sizing: border-box;
-        border-radius: em(4, $fz);
-        font-weight: 700;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;    
-    }
-
     &__btn {
         width: 32%;
+        font-weight: 700;
     }
 
     @media screen and (max-width: 1024px) {
