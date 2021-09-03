@@ -2,139 +2,139 @@
 @import './mixins.scss';
 
 .header {
-    position: fixed;
-    z-index: 2;
+  position: fixed;
+  z-index: 2;
+  display: flex;
+  background-color: rgba(16, 16, 29, .9);
+  width: 100%;
+  min-height: em(100, $fz-base);  
+  
+  &__menu {
     display: flex;
-    background-color: rgba(16, 16, 29, .9);
+  }
+
+  &__burger-menu {
+    transition: left .4s;
+    position: fixed;
     width: 100%;
-    min-height: em(100, $fz-base);  
-    
-    &__menu {
-        display: flex;
+    top: 0;
+    left: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: em(72, $fz-base);
+    background: rgba(5, 5, 10, 0.96);
+    z-index: 1;
+  }
+
+  &__link-burger {
+    $fz: 16;
+    text-decoration: none;
+    transition: color .3s;
+    font-family: $font-primary;
+    color: $cl-primary;
+    font-weight: 400;
+    font-size: em($fz, $fz-base);
+    margin-bottom: em(20, $fz);
+
+    &:first-child {
+      margin-top: em(20, $fz);
     }
 
-    &__burger-menu {
-        transition: top .4s;
-        position: fixed;
-        width: 100%;
-        top: -100%;
-        left: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: em(72, $fz-base);
-        background: rgba(5, 5, 10, 0.96);
-        z-index: 1;
+    &:hover {
+      color: #43ABF0;
+    }
+  }
+
+  &__burger {
+    display: none;
+    position: relative;
+    width: em(36, $fz-base);
+    height: em(16, $fz-base);
+    z-index: 3;
+
+    &::before {
+      content: '';
+      background-color: #fff;
+      position: absolute;
+      width: em(33, $fz-base);
+      height: em(3, $fz-base);
+      left: em(0, $fz-base);
+      top: em(3, $fz-base);
     }
 
-    &__link-burger {
-        $fz: 16;
-        text-decoration: none;
-        transition: color .3s;
-        font-family: $font-primary;
-        color: $cl-primary;
-        font-weight: 400;
-        font-size: em($fz, $fz-base);
-        margin-bottom: em(20, $fz);
+    &::after {
+      content: '';
+      background-color: #fff;
+      position: absolute;
+      width: em(24, $fz-base);
+      height: em(3, $fz-base);
+      left: em(8, $fz-base);
+      bottom: em(0, $fz-base);  
+    }
+  }
 
-        &:first-child {
-            margin-top: em(20, $fz);
-        }
+  &__logo {
+    text-decoration: none;
+    font-family: $font-secondary;
+    color: $cl-primary;
+    font-weight: 800;
+    font-size: em(28, $fz-base);
+    z-index: 3;
+  }
 
-        &:hover {
-            color: #43ABF0;
-        }
+  &__logo-span {
+    color: #42A9ED;
+  }
+
+  &__link {
+    $fz: 13;
+    text-decoration: none;
+    transition: color .3s;
+    font-family: $font-primary;
+    color: $cl-primary;
+    font-weight: 400;
+    font-size: em($fz, $fz-base);
+
+    &:not(:last-child) {
+      margin-right: em(60, $fz);
     }
 
-    &__burger {
-        display: none;
-        position: relative;
-        width: em(36, $fz-base);
-        height: em(16, $fz-base);
-        z-index: 3;
-    
-        &::before {
-            content: '';
-            background-color: #fff;
-            position: absolute;
-            width: em(33, $fz-base);
-            height: em(3, $fz-base);
-            left: em(0, $fz-base);
-            top: em(3, $fz-base);
-        }
-
-        &::after {
-            content: '';
-            background-color: #fff;
-            position: absolute;
-            width: em(24, $fz-base);
-            height: em(3, $fz-base);
-            left: em(8, $fz-base);
-            bottom: em(0, $fz-base);  
-        }
+    &:hover {
+      color: #43ABF0;
     }
+  }
+
+  @media screen and (max-width: 1024px) {
+    font-size: 15px;
 
     &__logo {
-        text-decoration: none;
-        font-family: $font-secondary;
-        color: $cl-primary;
-        font-weight: 800;
-        font-size: em(28, $fz-base);
-        z-index: 3;
-    }
-
-    &__logo-span {
-        color: #42A9ED;
+      font-size: 21px;
     }
 
     &__link {
-        $fz: 13;
-        text-decoration: none;
-        transition: color .3s;
-        font-family: $font-primary;
-        color: $cl-primary;
-        font-weight: 400;
-        font-size: em($fz, $fz-base);
+      $fz: 13;
 
-        &:not(:last-child) {
-            margin-right: em(60, $fz);
-        }
+      &:not(:last-child) {
+        margin-right: em(30, $fz);
+      }
+    }
+  }
 
-        &:hover {
-            color: #43ABF0;
-        }
+  @media screen and (max-width: 600px) {
+    min-height: em(75, $fz-base);
+    
+    &__menu {
+      display: none;
     }
 
-    @media screen and (max-width: 1024px) {
-        font-size: 15px;
-
-        &__logo {
-            font-size: 21px;
-        }
-
-        &__link {
-            $fz: 13;
-
-            &:not(:last-child) {
-                margin-right: em(30, $fz);
-            }
-        }
+    &__burger {
+      display: block;
     }
 
-    @media screen and (max-width: 600px) {
-        min-height: em(75, $fz-base);
-        
-        &__menu {
-            display: none;
-        }
-
-        &__burger {
-            display: block;
-        }
-
-        &__active {
-            transition: top .4s;
-            top: 0;
-        }
+    &__active {
+      transition: left .4s;
+      left: 0;
     }
+  }
 }

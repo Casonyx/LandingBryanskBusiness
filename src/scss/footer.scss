@@ -2,125 +2,125 @@
 @import './mixins.scss';
 
 .footer {
-    $fz: 13;
-    background-color: $cl-tertiary-light;
+	$fz: 13;
+	background-color: $cl-tertiary-light;
 
-    img {
-        margin: 0 em(10, $fz) 0 0;
-    }
+	img {
+		margin: 0 em(10, $fz) 0 0;
+	}
 
-    &__content {
-        display: flex;
-        align-items: center;
-        min-height: em(80, $fz-base);
-        font-size: em($fz, $fz-base);
-        font-family: $font-primary;
-        line-height: em(16, $fz);
-        font-weight: 400;
-        color: $cl-primary;
-    }
+	&__content {
+		display: flex;
+		align-items: center;
+		min-height: em(80, $fz-base);
+		font-size: em($fz, $fz-base);
+		font-family: $font-primary;
+		line-height: em(16, $fz);
+		font-weight: 400;
+		color: $cl-primary;
+	}
 
-    &__copyrights {
-        line-height: em(16, $fz);
-        color: $cl-primary;
-        margin: 0 em(38, $fz) 0 0;
-    }
+	&__copyrights {
+		line-height: em(16, $fz);
+		color: $cl-primary;
+		margin: 0 em(38, $fz) 0 0;
+	}
 
-    &__items {
-        display: flex;
-    }
+	&__items {
+		display: flex;
+	}
 
-    &__item {
-        display: flex;
-        align-items: center;
-        color: $cl-primary;
-        text-decoration: none;
-        
-        &:not(:last-child) {
-            margin-right: em(38, $fz);
-        }
+	&__item {
+		display: flex;
+		align-items: center;
+		color: $cl-primary;
+		text-decoration: none;
+		
+		&:not(:last-child) {
+			margin-right: em(38, $fz);
+		}
 
-        &-wallet {
-            color: #C3C3C3;
-        }
-    }
+		&-wallet {
+			color: #C3C3C3;
+		}
+	}
 
-    &__paywallets,
-    &__links {
-        display: flex; 
-        justify-content: space-between;
+	&__paywallets,
+	&__links {
+		display: flex; 
+		justify-content: space-between;
 
-        &::before {
-            content: '';
-            width: 1px;
-            height: em(18, $fz);
-            background-color: #C3C3C3;
-            margin-right: em(38, $fz);
-        }
-    }
+		&::before {
+			content: '';
+			width: 1px;
+			height: em(18, $fz);
+			background-color: #C3C3C3;
+			margin-right: em(38, $fz);
+		}
+	}
 
-    &__links {
-        &::before {
-            margin-left: em(38, $fz);
-        }
-    }
+	&__links {
+		&::before {
+			margin-left: em(38, $fz);
+		}
+	}
 
-    &__text {
-        transition: color .3s;
-        
-        &:hover {
-            color:  #43ABF0;
-        }
-    }
+	&__text {
+		transition: color .3s;
+		
+		&:hover {
+			color:  #43ABF0;
+		}
+	}
 
-    @media screen and (max-width: 1220px) {
-        &__content {
-            flex-direction: column-reverse;
-            justify-content: center;
-            padding: em(10, $fz) 0;
-        }
+	@media screen and (max-width: 1220px) {
+		&__content {
+			flex-direction: column-reverse;
+			justify-content: center;
+			padding: em(10, $fz) 0;
+		}
 
-        &__copyrights {
-            margin: 0;
-            font-size: em(11, $fz);
-        }
+		&__copyrights {
+			margin: 0;
+			font-size: em(11, $fz);
+		}
 
-        &__item {
-            &:not(:last-child) {
-                margin-right: em(18, $fz);
-            }
-        }
+		&__item {
+			&:not(:last-child) {
+				margin-right: em(18, $fz);
+			}
+		}
 
-        &__items {
-            margin-bottom: em(18, $fz);
-        }
+		&__items {
+			margin-bottom: em(18, $fz);
+		}
 
-        &__paywallets {
-            margin-right: em(28, $fz);
-        }
+		&__paywallets {
+			margin-right: em(28, $fz);
+		}
 
-        &__paywallets,
-        &__links {
-            &::before {
-                display: none;
-            }
-        }
-    }
+		&__paywallets,
+		&__links {
+			&::before {
+				display: none;
+			}
+		}
+	}
 
-    @media screen and (max-width: 768px) {
-        &__items {
-            flex-direction: column;
-            margin: 0;
-        }
+	@media screen and (max-width: 768px) {
+		&__items {
+			flex-direction: column;
+			margin: 0;
+		}
 
-        &__paywallets,
-        &__links {
-            justify-content: center;
-            margin: 0 0 em(10, $fz) 0;
-        }
-    }
+		&__paywallets,
+		&__links {
+			justify-content: center;
+			margin: 0 0 em(10, $fz) 0;
+		}
+	}
 
-    @media screen and (max-width: 425px) {
-        font-size: 12px;
-    }
+	@media screen and (max-width: 425px) {
+		font-size: 12px;
+	}
 }

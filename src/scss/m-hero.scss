@@ -2,134 +2,134 @@
 @import './mixins.scss';
 
 .m-hero {
-    background-image: url('../images/m-hero/m-hero-img.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: em(200, $fz-base) 0 em(50, $fz-base);
-    background-position-x: center;
-    min-height: em(850, $fz-base);
-    box-sizing: border-box;
+	background-image: url('../images/m-hero/m-hero-img.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: em(200, $fz-base) 0 em(50, $fz-base);
+	background-position-x: center;
+	min-height: em(850, $fz-base);
+	box-sizing: border-box;
 
-    &__content {
-        max-width: em(780, $fz-base);
-    }
+	&__content {
+		max-width: em(780, $fz-base);
+	}
 
-    &__title {
-        $fz: 48;
-        font-weight: 700;
-        font-size: em($fz, $fz-base);
-        line-height: em(58, $fz);
-        margin: 0;
-        color: $cl-secondary;
-        font-family: $font-primary;
-        margin-bottom: em(80, $fz);
-    }
+	&__title {
+		$fz: 48;
+		font-weight: 700;
+		font-size: em($fz, $fz-base);
+		line-height: em(58, $fz);
+		margin: 0;
+		color: $cl-secondary;
+		font-family: $font-primary;
+		margin-bottom: em(80, $fz);
+	}
 
-    &__title-span {
-        color: #3E9CDC;
-    }
+	&__title-span {
+		color: #3E9CDC;
+	}
 
-    &__subtitle {
-        $fz: 20;
-        font-weight: 700;
-        font-size: em($fz, $fz-base);
-        line-height: em(24, $fz);
-        color: $cl-secondary;
-        font-family: $font-primary;
-        margin: 0 0 em(10, $fz-base);
-    }
+	&__subtitle {
+		$fz: 20;
+		font-weight: 700;
+		font-size: em($fz, $fz-base);
+		line-height: em(24, $fz);
+		color: $cl-secondary;
+		font-family: $font-primary;
+		margin: 0 0 em(10, $fz-base);
+	}
 
-    &__list {
-        padding-left: 0;
-        margin: 0 0 em(80, $fz-base);
-    }
+	&__list {
+		padding-left: 0;
+		margin: 0 0 em(80, $fz-base);
+	}
 
-    &__li {
-        $fz: 20;
-        list-style: none;
-        font-size: em($fz, $fz-base);
-        margin-bottom: em(5, $fz);
-        line-height: em(24, $fz);
-        color: $cl-secondary;
-        font-family: $font-primary;
+	&__li {
+		$fz: 20;
+		list-style: none;
+		font-size: em($fz, $fz-base);
+		margin-bottom: em(5, $fz);
+		line-height: em(24, $fz);
+		color: $cl-secondary;
+		font-family: $font-primary;
 
-        &:before {
-            content: "–"; 
-            margin: 0 em(11, $fz); 
-        }
-    }
+		&:before {
+			content: "–"; 
+			margin: 0 em(11, $fz); 
+		}
+	}
 
-    &__text {
-        $fz: 18;
-        font-weight: 400;
-        font-size: em($fz, $fz-base);
-        line-height: em(30, $fz);
-        margin: em(23, $fz) 0 em(28, $fz);
-    }
+	&__text {
+		$fz: 18;
+		font-weight: 400;
+		font-size: em($fz, $fz-base);
+		line-height: em(30, $fz);
+		margin: em(23, $fz) 0 em(28, $fz);
+	}
 
-    &__buttons {
-        display: flex;
+	&__buttons {
+		display: flex;
 
-        .btn {
-            &:not(:last-child) {
-                $fz: 13;
-                margin-right: em(30, $fz);
-            }
-        }
-    }
+		.btn {
+			&:not(:last-child) {
+				$fz: 13;
+				margin-right: em(30, $fz);
+			}
+		}
+	}
 
-    @media screen and (max-width: 1024px) {
-        font-size: 15px;
+	@media screen and (max-width: 1024px) {
+		font-size: 15px;
 
-        &__content {
-            $fz: 14;
-            font-size: #{$fz}px;
-            max-width: em(540, $fz);
-        }
-    }
+		&__content {
+			$fz: 14;
+			font-size: #{$fz}px;
+			max-width: em(540, $fz);
+		}
+	}
 
-    @media screen and (max-width: 600px) {
-        $fz: 12;
-        font-size: #{$fz}px;
-        min-height: em(565, $fz);
-        padding-top: em(125, $fz);
+	@media screen and (max-width: 600px) {
+		$fz: 12;
+		font-size: #{$fz}px;
+		min-height: em(565, $fz);
+		padding-top: em(125, $fz);
 
-        &__title {
-            $fz: 25;
-            font-size: #{$fz}px;
-            margin-bottom: em(30, $fz);
-        }
+		&__title {
+			$fz: 25;
+			font-size: #{$fz}px;
+			margin-bottom: em(30, $fz);
+		}
 
-        &__list {
-            $fz: 13;
-            margin-bottom: em(30, $fz);
-        }
+		&__list {
+			$fz: 13;
+			margin-bottom: em(30, $fz);
+		}
 
-        &__content {
-            $fz: 13;
-            font-size: #{$fz}px;
-            text-align: center;
-            margin: 0 auto;
-            max-width: em(320, $fz);
-        }
+		&__content {
+			$fz: 13;
+			font-size: #{$fz}px;
+			text-align: center;
+			margin: 0 auto;
+			max-width: em(320, $fz);
+		}
 
-        &__buttons {
-            display: block;
+		&__buttons {
+			display: block;
 
-            .btn {
-                &:not(:last-child) {
-                    margin: 0 0 em(15, $fz-base);
-                }
-            }
-        }
-    }
+			.btn {
+				&:not(:last-child) {
+					margin: 0 0 em(15, $fz-base);
+				}
+			}
+		}
+	}
 }
 
 @media screen and (max-width: 435px) {
-    .m-hero {
+	.m-hero {
 
-        &__li {
-            margin: em(10, $fz-base) 0;
-        }
-    }
+		&__li {
+			margin: em(10, $fz-base) 0;
+		}
+	}
 }

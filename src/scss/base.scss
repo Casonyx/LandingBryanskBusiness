@@ -2,70 +2,70 @@
 @import './mixins.scss';
 
 body {
-    background-color: #272733;
-    font-size: #{$fz-base}px;
+  background-color: #272733;
+  font-size: #{$fz-base}px;
 }
 
 .container {
-    max-width: em(1172, $fz-base);
-    margin: 0 auto;
-    padding: 0 em(20, $fz-base);
+  max-width: em(1172, $fz-base);
+  margin: 0 auto;
+  padding: 0 em(20, $fz-base);
 
-    &_flex {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+  &_flex {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .input {
-    @include input;
-    outline: none;
+  @include input;
+  outline: none;
 
-    &::placeholder {
-        $fz: 18;
-        color: #272733;
-        font-family: $font-primary;
-        font-size: em($fz, $fz-base);
-        font-weight: 400;
-    }
+  &::placeholder {
+    $fz: 18;
+    color: #272733;
+    font-family: $font-primary;
+    font-size: em($fz, $fz-base);
+    font-weight: 400;
+  }
 }
 
 .btn {
-    $fz: 13;
-    $background-color: #3E9CDC;
-    font-size: #{$fz}px;
-    border: 1px solid $cl-primary;
-    box-sizing: border-box;
-    border-radius: em(4, $fz);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    font-weight: 400;
-    min-width: em(183, $fz);
-    min-height: em(48, $fz);
-    padding: em(10, $fz);
-    font-family: $font-primary;
-    background-color: $background-color;
-    color: $cl-primary;
-    transition: background-color .3s;
-    cursor: pointer;
+  $fz: 13;
+  $background-color: #3E9CDC;
+  font-size: #{$fz}px;
+  border: 1px solid $cl-primary;
+  box-sizing: border-box;
+  border-radius: em(4, $fz);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 400;
+  min-width: em(183, $fz);
+  min-height: em(48, $fz);
+  padding: em(10, $fz);
+  font-family: $font-primary;
+  background-color: $background-color;
+  color: $cl-primary;
+  transition: background-color .3s;
+  cursor: pointer;
 
+  &:hover {
+      background-color: lighten($background-color, 8%);
+  }
+
+  &__white {
+    border: 1px solid #6F6D7B;
+    background-color: $cl-primary;
+    color: #2A2B30;
+    transition: box-shadow .3s;
+    
     &:hover {
-        background-color: lighten($background-color, 8%);
-    }
-
-    &__white {
-        border: 1px solid #6F6D7B;
+        box-shadow: 0 0 5px .5px #3e9cdc;
         background-color: $cl-primary;
-        color: #2A2B30;
-        transition: box-shadow .3s;
-        
-        &:hover {
-            box-shadow: 0 0 5px .5px #3e9cdc;
-            background-color: $cl-primary;
-        }
     }
+  }
 }
